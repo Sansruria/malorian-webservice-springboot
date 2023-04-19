@@ -7,5 +7,5 @@ spring:
     servlet:
       content-type: text/html
     cache: false
-    prefix: classpath:templates/views/
+    prefix: classpath:templates/
     check-template-location: true

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lagn="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <th:block th:insert="fragments/index/indexBoardHeader :: indexBoardHeaderFragment"></th:block>
+</head>
+
+<body th:fragment="bodyFragment" data-theme="light" data-layout-mode="horizontal" data-topbar-color="dark" data-menu-position="fixed">
+
+  <!-- Begin Page -->
+  <div id="wrapper">
+
+    <!-- Topbar Start -->
+    <th:block th:replace="fragments/index/indexBoardTopBar :: indexBoardTopBarFragment"></th:block>
+    <!-- end Topbar -->
+
+    <!-- Topbar Start -->
+    <th:block th:fragment="fragment/index/indexBoardTopNav :: indexBoardTopNavFragment"></th:block>
+    <!-- end topnav-->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page">
+      <div class="conetent">
+
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+          <th:block layout:fragment="content"></th:block>
+
+        </div> <!-- container -->
+
+      </div> <!-- content -->
+
+      <!-- Footer Start -->
+      <th:block th:replace="fragments/index/indexBoardFooter :: indexBoardFooterFragment"></th:block>
+      <!-- end Footer -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+  </div>
+  <!-- END wrapper -->
+
+  <!-- JS Start -->
+  <th:block th:replace="fragments/index/indexBoardScript :: indexBoardScriptFragment"></th:block>
+  <!-- JS End -->
+
+</body>
+</html>
