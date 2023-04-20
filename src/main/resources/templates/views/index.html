@@ -31,6 +31,23 @@
     </div>
 
     <div class="row">
+        <table class="table">
+            <tr>
+                <th>번호</th>
+                <th>분류</th>
+                <th>제목</th>
+                <th>글쓴이</th>
+                <th>작성일</th>
+                <th>조회</th>
+            </tr>
+            <tr th:each="product : ${productList}">
+                <td th:text="${product.seq}"></td>
+                <td th:text="${product.category}"></td>
+                <td th:text="${product.title}"></td>
+                <td th:text="${product.name}"></td>
+                <td>2023-04-21</td>
+            </tr>
+        </table>
     </div>
     <!-- end row-->
 
