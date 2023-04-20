@@ -4,17 +4,16 @@
       xmlns:sec="http://www.w3.org/1999/xhtml"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       data-layout="horizontal" data-topbar-color="dark">
-<head>
-  <th:block th:insert="fragments/index/indexBoardHeader :: indexBoardHeaderFragment"></th:block>
-</head>
 
-<body th:fragment="bodyFragment">
+<div th:replace="~{fragments/index/indexBoardHeader :: indexBoardHeaderFragment}"></div>
+
+<body>
 
   <!-- Begin page -->
   <div id="wrapper">
     <!-- Layout -->
     <!-- ========== Left Sidebar Start ========== -->
-    <th:block th:replace="fragments/index/indexBoardLeftSidebar :: indexBoardLeftSidebarFragment"></th:block>
+    <div th:replace="~{fragments/index/indexBoardLeftSidebar :: indexBoardLeftSidebarFragment}"></div>
     <!-- ========== Left Sidebar End ========== -->
 
     <!-- ============================================================== -->
@@ -24,7 +23,7 @@
     <div class="content-page">
 
       <!-- ========== Topbar Start ========== -->
-      <th:block th:replace="fragments/index/indexBoardTopbar :: indexBoardTopbarFragment"></th:block>
+      <div th:replace="~{fragments/index/indexBoardTopbar :: indexBoardTopbarFragment}"></div>
       <!-- ========== Topbar End ========== -->
 
       <div class="content">
@@ -39,7 +38,7 @@
       <!-- content -->
 
       <!-- Footer Start -->
-      <th:block th:replace="fragments/index/indexBoardFooter :: indexBoardFooterFragment"></th:block>
+      <div th:replace="~{fragments/index/indexBoardFooter :: indexBoardFooterFragment}"></div>
       <!-- end Footer -->
 
     </div>
@@ -51,9 +50,21 @@
   <!-- END wrapper -->
 
   <!-- Theme Settings -->
-  <th:block th:replace="fragments/index/indexBoardThemeSetting :: indexBoardThemeSetting"></th:block>\
+  <div th:replace="~{fragments/index/indexBoardThemeSetting :: indexBoardThemeSetting}"></div>
 
   <!-- JS -->
-  <th:block th:replace="fragments/index/indexBoardScript :: indexBoardScriptFragment"></th:block>
+  <!-- Vendor js -->
+  <script src="assets/creative/js/vendor.min.js"></script>
+
+  <!-- App js -->
+  <script src="assets/creative/js/app.min.js"></script>
+
+  <!-- Plugins js-->
+  <script src="assets/creative/libs/flatpickr/flatpickr.min.js"></script>
+  <script src="assets/creative/libs/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/creative/libs/selectize/js/standalone/selectize.min.js"></script>
+
+  <!-- Dashboar 1 init js-->
+  <script src="assets/creative/js/pages/dashboard-1.init.js"></script>
 </body>
 </html>
