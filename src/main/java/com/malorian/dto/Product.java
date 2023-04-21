@@ -1,7 +1,11 @@
 package com.malorian.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @AllArgsConstructor
 public class Product {
     private int seq;

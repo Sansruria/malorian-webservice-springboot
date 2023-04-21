@@ -4,7 +4,6 @@ import com.malorian.dto.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -25,6 +24,11 @@ public class IndexController {
         productList.add(new Product(3,"정보","드디어 첫 게시글을 작성해 보아요","말로리안",1));
         productList.add(new Product(4,"정보","드디어 첫 게시글을 작성해 보아요","말로리안",1));
         productList.add(new Product(5,"정보","드디어 첫 게시글을 작성해 보아요","말로리안",1));
+        productList.add(new Product(6,"정보","드디어 첫 게시글을 작성해 보아요","말로리안",1));
+        productList.add(new Product(7,"정보","드디어 첫 게시글을 작성해 보아요","말로리안",1));
+        productList.add(new Product(8,"정보","드디어 첫 게시글을 작성해 보아요","말로리안",1));
+        productList.add(new Product(9,"정보","드디어 첫 게시글을 작성해 보아요","말로리안",1));
+        productList.add(new Product(10,"정보","드디어 첫 게시글을 작성해 보아요","말로리안",1));
 
         model.addAttribute("productList", productList);
 
