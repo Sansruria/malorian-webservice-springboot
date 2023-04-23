@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+    <div class="topnav" th:fragment="topnav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+                <div class="collapse navbar-collapse" id="topnav-menu-content">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button"
+                               data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe-package me-1"></i> Pages <div class="arrow-down"></div>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
+                                <a href="index.html" class="dropdown-item">Dashboard 1</a>
+                                <a href="dashboard-2.html" class="dropdown-item">Dashboard 2</a>
+                                <a href="dashboard-3.html" class="dropdown-item">Dashboard 3</a>
+                                <a href="dashboard-4.html" class="dropdown-item">Dashboard 4</a>
+                            </div>
+                        </li>
+                    </ul> <!-- end navbar-->
+                </div> <!-- end .collapsed-->
+            </nav>
+        </div> <!-- end container-fluid -->
+    </div>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lagn="ko"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head th:insert="~{/fragments/default/defaultHeaderFragment :: header}"></head>
+
+<body data-layout-mode="horizontal" data-theme="light" data-topbar-color="dark" data-menu-position="fixed">
+  <div id="wrapper">
+    <div th:replace="~{/fragments/default/defaultTopbarFragment :: topbar}"></div>
+
+    <div th:replace="~{/fragments/default/defaultTopnavFragment :: topnav}"></div>
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+      <div class="content">
+        <div class="container-fluid">
+      <th:block layout:fragment="content"></th:block>
+        </div>
+      </div>
+
+      <div th:replace="~{/fragments/default/defaultFooterFragment :: footer}"></div>
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+  </div>
+
+  <th:block th:replace="~{/fragments/default/defaultRightSidebarFragment :: rightSidebar}"></th:block>
+
+  <th:block th:replace="~{/fragments/default/defaultScriptFragment :: script}"></th:block>
+</body>
+</html>
