@@ -29,25 +29,18 @@
                 <div class="card-body">
                     <div class="mt-4">
                         <form>
-                            <h5 class="font-18" th:text="${title}">Your elite author Graphic Optimization reward is ready!</h5>
+                            <input type="hidden" id="id" th:value="${article.id}"/>
+                            <h5 class="font-18" th:text="${article.title}">Your elite author Graphic Optimization reward is ready!</h5>
                             <div class="d-flex align-items-start mb-3 mt-3">
-                                <img class="d-flex me-2 rounded-circle" src="assets/images/users/user-1.jpg" alt="placeholder image" height="32">
+                                <img class="d-flex me-2 rounded-circle" src="../assets/images/users/user-1.jpg" alt="placeholder image" height="32">
                                 <div class="w-100">
-                                    <small class="float-end" th:text="${date}">Dec 14, 2017, 5:17 AM</small>
-                                    <h6 class="m-0 font-14" th:text="${name}">Steven Smith</h6>
-                                    <i class="mdi mdi-eye me-1"></i><small class="text-muted" th:text="${count}">From: jonathan@domain.com</small>
+                                    <small class="float-end" th:text="${#temporals.format(article.modifiedDate, 'yyyy-MM-dd HH:mm')}">Dec 14, 2017, 5:17 AM</small>
+                                    <h6 class="m-0 font-14" th:text="${article.author}">Steven Smith</h6>
+                                    <i class="mdi mdi-eye me-1"></i><small class="text-muted" th:text="${article.hit}">From: jonathan@domain.com</small>
                                 </div>
                             </div>
 
-                            <div>
-                                여기는 내용이 들어갈 공간이에요<br/>
-                                여기는 내용이 들어갈 공간이에요<br/>
-                                여기는 내용이 들어갈 공간이에요<br/>
-                                여기는 내용이 들어갈 공간이에요<br/>
-                                여기는 내용이 들어갈 공간이에요<br/>
-                                여기는 내용이 들어갈 공간이에요<br/>
-                                여기는 내용이 들어갈 공간이에요<br/>
-                            </div>
+                            <div th:text="${article.content}"></div>
 
                             <div>
                                 <div class="text-end">

@@ -1,9 +1,11 @@
 package com.malorian.web.dto.article;
 
-import com.malorian.domain.article.Article;
+import com.malorian.domain.article.Articles;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Getter
 public class ArticleCreateRequestDto {
     private String title;
@@ -17,8 +19,8 @@ public class ArticleCreateRequestDto {
         this.author = author;
     }
 
-    public Article toEntity() {
-        return Article.builder()
+    public Articles toEntity() {
+        return Articles.builder()
                 .title(title)
                 .content(content)
                 .author(author)

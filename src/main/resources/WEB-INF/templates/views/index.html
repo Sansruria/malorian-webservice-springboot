@@ -44,16 +44,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <tr th:each="product : ${productList}">
-                        <td th:text="${product.seq}">1</td>
+                    <tr th:each="article : ${articles}">
+                        <td th:text="${article.id}">1</td>
                         <td>
-                            <a href="views/detail" th:href="@{/articles}">
-                                <span th:text="${product.title}">데이터가 없습니다</span>
+                            <a href="views/detail" th:href="@{'/article/' + ${article.id}}">
+                                <span th:text="${article.title}">데이터가 없습니다</span>
                             </a>
                         </td>
-                        <td th:text="${product.name}">이름</td>
-                        <td th:text="2023-04-21">날짜</td>
-                        <td th:text="1">4</td>
+                        <td th:text="${article.author}">이름</td>
+                        <td th:text="${#temporals.format(article.createDate, 'yyyy-MM-dd HH:mm')}">날짜</td>
+                        <td th:text="${article.hit}">0</td>
                     </tr>
                     </tbody>
                 </table>
@@ -64,7 +64,7 @@
 
     <script>
         document.getElementById("moveInsertPage").onclick = function() {
-          location.href="/community/new";
+          location.href="/article/new";
         };
     </script>
 </th:block>

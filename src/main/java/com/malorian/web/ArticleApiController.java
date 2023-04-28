@@ -2,10 +2,10 @@ package com.malorian.web;
 
 import com.malorian.service.article.ArticleService;
 import com.malorian.web.dto.article.ArticleCreateRequestDto;
+import com.malorian.web.dto.article.ArticleResponseDto;
+import com.malorian.web.dto.article.ArticleUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RestController
@@ -13,35 +13,30 @@ public class ArticleApiController {
 
     private final ArticleService articleService;
 
-    // Insert
+    // Create
     @PostMapping("/api/v1/article/create")
     public Long create(@RequestBody ArticleCreateRequestDto requestDto) {
         return articleService.create(requestDto);
     }
 
-    // View
+    // Read
+    @GetMapping("/api/v1/article/{id}")
+    public ArticleResponseDto read(@PathVariable Long id) {
+        return articleService.findById(id);
+    }
+
     // Update
+    @PutMapping("/api/v1/article/{id}")
+    public Long update(@PathVariable Long id,
+                       @RequestBody ArticleUpdateRequestDto requestDto) {
+        return articleService.update(id, requestDto);
+    }
+
     // Delete
-
-    /*
-    @PostMapping("/api/v1/board/write")
-    public Long save(@RequestBody BoardSaveRequestDto requestDto) {
-        return boardService.save(requestDto);
-    }
-
-    @GetMapping("/api/v1/board/{id}")
-    public BoardResponseDto view(@PathVariable Long id) {
-        return boardService.findById(id);
-    }
-
-    @PutMapping("/api/v1/board/{id}")
-    public Long update(@PathVariable Long id, @RequestBody BoardUpdateRequestDto requestDto) {
-        return boardService.update(id, requestDto);
-    }
-
     @DeleteMapping("/api/v1/delete/{id}")
     public Long delete(@PathVariable Long id) {
-        boardService.delete(id);
+        articleService.delete(id);
         return id;
-        */
+    }
+
 }

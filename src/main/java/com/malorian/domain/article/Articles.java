@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @Entity
-public class Article extends BaseTimeEntity {
+public class Articles extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,13 +20,11 @@ public class Article extends BaseTimeEntity {
 
     @Column(columnDefinition = "TEXT", nullable = true)
     private String content;
-
     private String author;
-
     private int hit;
 
     @Builder
-    public Article(String title, String content, String author) {
+    public Articles(String title, String content, String author) {
         this.title = title;
         this.content = content;
         this.author = author;
