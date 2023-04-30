@@ -29,7 +29,7 @@
                 <div class="card-body">
                     <div class="mt-4">
                         <form>
-                            <input type="hidden" id="id" th:value="${article.id}"/>
+                            <input type="hidden" id="articleId" th:value="${article.id}"/>
                             <h5 class="font-18" th:text="${article.title}">Your elite author Graphic Optimization reward is ready!</h5>
                             <div class="d-flex align-items-start mb-3 mt-3">
                                 <img class="d-flex me-2 rounded-circle" src="../assets/images/users/user-1.jpg" alt="placeholder image" height="32">
@@ -44,9 +44,9 @@
 
                             <div>
                                 <div class="text-end">
-                                    <button type="button" class="btn btn-success waves-effect waves-light"><i class="mdi mdi-content-save-outline"></i></button>
-                                    <button type="button" class="btn btn-success waves-effect waves-light"><i class="mdi mdi-delete"></i></button>
-                                    <button class="btn btn-primary waves-effect waves-light"> <span>Send</span> <i class="mdi mdi-send ms-2"></i> </button>
+                                    <button class="btn btn-primary waves-effect waves-light" id="btnUpdateView">
+                                        <span>수정하기</span><i class="mdi mdi-send ms-2"></i>
+                                    </button>
                                 </div>
                             </div>
 

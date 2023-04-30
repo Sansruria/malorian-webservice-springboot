@@ -22,6 +22,10 @@
         <script src="/assets/js/pages/form-quilljs.init.js"></script>
 
         <script>
+            $('#btnUpdateView').click(function() {
+                location.href = '/article/modify/' + $('#articleId').val();
+            });
+
             var main = {
                 init : function () {
                     var _this = this;

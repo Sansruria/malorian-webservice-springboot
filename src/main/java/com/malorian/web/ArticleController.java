@@ -28,11 +28,11 @@ public class ArticleController {
     }
 
     // Update Page
-    @GetMapping("/article/update/{id}")
+    @GetMapping("/article/modify/{id}")
     public String modify(@PathVariable Long id, Model model) {
         ArticleResponseDto responseDto = articleService.findById(id);
         model.addAttribute("article", responseDto);
-        return "views/articles/update";
+        return "views/articles/modify";
     }
 
 }
