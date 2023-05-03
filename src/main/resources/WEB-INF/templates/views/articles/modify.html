@@ -29,7 +29,7 @@
                 <div class="card-body">
                     <div class="mt-4">
                         <form>
-                            <input type="hidden" id="id" th:value="${article.id}" />
+                            <input type="hidden" id="articleId" th:value="${article.id}" />
                             <div class="mb-3">
                                 <input type="text" id="title" class="form-control" placeholder="To" th:value="${article.title}">
                             </div>
@@ -40,15 +40,14 @@
                             <div class="mb-3 card border-0">
                                 <textarea id="content" th:text="${article.content}"></textarea>
                             </div>
-
-                            <div>
-                                <div class="text-end">
-                                    <button class="btn btn-primary waves-effect waves-light" id="btn-update">
-                                        <span>저장하기</span><i class="mdi mdi-send ms-2"></i></button>
-                                </div>
-                            </div>
-
                         </form>
+
+                        <div>
+                            <div class="text-end">
+                                <button class="btn btn-primary waves-effect waves-light" id="btn-update">
+                                    <span>저장하기</span><i class="mdi mdi-send ms-2"></i></button>
+                            </div>
+                        </div>
                     </div> <!-- end card-->
                 </div>
             </div>

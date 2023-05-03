@@ -41,16 +41,18 @@
                             </div>
 
                             <div th:text="${article.content}"></div>
-
-                            <div>
-                                <div class="text-end">
-                                    <button class="btn btn-primary waves-effect waves-light" id="btnUpdateView">
-                                        <span>수정하기</span><i class="mdi mdi-send ms-2"></i>
-                                    </button>
-                                </div>
-                            </div>
-
                         </form>
+
+                        <div>
+                            <div class="text-end">
+                                <button class="btn btn-primary waves-effect waves-light" id="btnUpdateView">
+                                    <span>수정하기</span><i class="mdi mdi-send ms-2"></i>
+                                </button>
+                                <button class="btn btn-primary waves-effect waves-light" id="btn-delete">
+                                    <span>삭제</span><i class="mdi mdi-send ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div> <!-- end card-->
                 </div>
             </div>
